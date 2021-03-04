@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link href="/fonts/fonts.css" rel="stylesheet" />
+          <link rel="icon" href="/assets/images/logo-min.png" />
         </Head>
         <body>
           <Main />

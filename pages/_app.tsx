@@ -12,6 +12,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import { APP_TITLE } from 'common/i18n'
 import theme from 'common/theme'
 import Layout from 'components/Layout'
 import { useApollo } from 'libs/apollo-client'
@@ -35,7 +36,7 @@ const MyApp = (props: AppProps) => {
       <ApolloProvider client={apolloClient}>
         <>
           <Head>
-            <title>My page</title>
+            <title>{APP_TITLE}</title>
             <meta
               name="viewport"
               content="initial-scale=1, width=device-width"

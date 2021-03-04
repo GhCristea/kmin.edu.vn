@@ -1,11 +1,14 @@
-import * as React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import ProTip from '../src/ProTip';
-import Link from '../src/Link';
-import Copyright from '../src/Copyright';
+import * as React from 'react'
 
+import Box from '@material-ui/core/Box'
+import Container from '@material-ui/core/Container'
+import Typography from '@material-ui/core/Typography'
+
+import Copyright from '../src/Copyright'
+import Link from '../src/Link'
+import ProTip from '../src/ProTip'
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function Index() {
   return (
     <Container maxWidth="sm">
@@ -20,5 +23,5 @@ export default function Index() {
         <Copyright />
       </Box>
     </Container>
-  );
+  )
 }

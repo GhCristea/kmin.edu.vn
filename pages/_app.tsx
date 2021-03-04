@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable react/jsx-props-no-spreading */
 
-import { FC, useEffect } from 'react'
+import { useEffect } from 'react'
 
+import { ApolloProvider } from '@apollo/client'
 import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -9,12 +12,14 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import theme from '../src/theme'
+import { useApollo } from 'libs/apollo-client'
+import theme from 'src/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
-const MyApp: FC<AppProps> = (props) => {
+const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props
+  const apolloClient = useApollo(pageProps.initialApolloState)
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -26,15 +31,22 @@ const MyApp: FC<AppProps> = (props) => {
 
   return (
     <CacheProvider value={cache}>
-      <Head>
-        <title>My page</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ApolloProvider client={apolloClient}>
+        <>
+          <Head>
+            <title>My page</title>
+            <meta
+              name="viewport"
+              content="initial-scale=1, width=device-width"
+            />
+          </Head>
+          <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </>
+      </ApolloProvider>
     </CacheProvider>
   )
 }

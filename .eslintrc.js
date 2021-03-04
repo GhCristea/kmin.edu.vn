@@ -64,7 +64,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '{pages,src}{/**,}',
+            pattern: '{pages,src,libs}{/**,}',
             group: 'internal',
           },
         ],

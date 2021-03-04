@@ -1,11 +1,13 @@
 import { red } from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
 
-const PRIMARY_COLOR = '#103955'
-const SECONDARY_COLOR = '#FFC82D'
-const BORDER_RADIUS = 4
-const TEXT_FONT = `"OpenSans","Helvetica","Arial",sans-serif`
-const HEADING_FONT = `"OpenSans","Helvetica","Arial",sans-serif`
+import {
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  BORDER_RADIUS,
+  TEXT_FONT,
+  HEADING_FONT,
+} from './theme.constants'
 
 // Create a theme instance.
 const theme = createMuiTheme({
@@ -27,6 +29,7 @@ const theme = createMuiTheme({
     borderRadius: BORDER_RADIUS,
   },
   typography: {
+    fontSize: 16,
     htmlFontSize: 18,
     allVariants: {
       fontFamily: TEXT_FONT,
@@ -54,6 +57,22 @@ const theme = createMuiTheme({
       fontWeight: 700,
       fontSize: '25px',
       lineHeight: '30.45px',
+    },
+  },
+  components: {
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+        },
+      },
     },
   },
 })

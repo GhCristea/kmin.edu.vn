@@ -6,8 +6,8 @@ import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 
+import Link from '../components/Link'
 import Copyright from '../src/Copyright'
-import Link from '../src/Link'
 import ProTip from '../src/ProTip'
 
 export default function About() {

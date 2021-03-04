@@ -12,8 +12,9 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import theme from 'common/theme'
+import Layout from 'components/Layout'
 import { useApollo } from 'libs/apollo-client'
-import theme from 'src/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
@@ -43,7 +44,9 @@ const MyApp = (props: AppProps) => {
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
-            <Component {...pageProps} />
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
           </ThemeProvider>
         </>
       </ApolloProvider>

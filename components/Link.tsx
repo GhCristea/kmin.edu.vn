@@ -8,6 +8,8 @@ import clsx from 'clsx'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 import { useRouter } from 'next/router'
 
+import { withGridItem } from './GridItemContainer'
+
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>,
     Omit<NextLinkProps, 'href' | 'as'> {
@@ -125,4 +127,4 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   )
 })
 
-export default Link
+export default withGridItem(Link)

@@ -84,13 +84,23 @@ const Header: FC<HeaderProps> = (props) => {
   )
 }
 
-const useStyles = makeStyles(({ palette }) => ({
-  root: {},
+const useStyles = makeStyles(({ palette, transitions }) => ({
+  root: { height: APP_BAR_HEIGHT },
   toolbar: { minHeight: APP_BAR_HEIGHT },
   container: {},
   menuItem: {
     color: palette.primary.contrastText,
     textDecoration: 'none !important',
+    '& > *': {
+      opacity: 0.85,
+      transition: transitions.create('opacity', {
+        duration: transitions.duration.short,
+      }),
+
+      '&:hover': {
+        opacity: 1,
+      },
+    },
   },
   skillTestButton: {
     backgroundColor: palette.background.paper,

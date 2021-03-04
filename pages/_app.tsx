@@ -11,6 +11,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import ProgressBar from 'nextjs-progressbar'
 
 import { APP_TITLE } from 'common/i18n'
 import theme from 'common/theme'
@@ -45,6 +46,12 @@ const MyApp = (props: AppProps) => {
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
+            <ProgressBar
+              color={theme.palette.secondary.main}
+              startPosition={0.3}
+              stopDelayMs={200}
+              height={3}
+            />
             <Layout>
               <Component {...pageProps} />
             </Layout>

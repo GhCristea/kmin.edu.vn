@@ -12,3 +12,4 @@ export const KMIN_INSTAGRAM_URL = 'https://facebook.com/hoclaptrinhthatdedang'
 export const KMIN_YOUTUBE_URL = 'https://facebook.com/hoclaptrinhthatdedang'
 
 export const HOME_HEADER_IMG_URL = `/assets/images/home/home-header.png`
+export const PATTERN_YELLOW_URL = `/assets/images/pattern-yellow.png`

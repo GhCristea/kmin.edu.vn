@@ -1,5 +1,6 @@
 import { Heart, Medal, Smiley } from 'phosphor-react'
 
+import SkillTestHorizontal from 'blocks/SkillTestHorizontal'
 import ThreeValuesBlock from 'blocks/ThreeValues'
 import UpcomingCourses from 'blocks/UpcomingCourses'
 import { HOME_HEADER_IMG_URL } from 'common/theme'
@@ -50,6 +51,8 @@ const Index = () => {
       <FindYourTrueCourses />
 
       <UpcomingCourses />
+
+      <SkillTestHorizontal />
     </>
   )
 }

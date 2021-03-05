@@ -1,32 +1,25 @@
-import * as React from 'react'
+import { HOME_HEADER_IMG_URL } from 'common/theme'
+import Button from 'components/Button'
+import HeadingFluidImage from 'components/HeadingFluidImage'
 
-import Box from '@material-ui/core/Box'
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
-
-import Link from '../components/Link'
-import Copyright from '../src/Copyright'
-import ProTip from '../src/ProTip'
-
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default function Index() {
+const Index = () => {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography
-          variant="h4"
-          component="h1"
-          gutterBottom
-          fontFamily="OpenSans"
-        >
-          Next.js v5-alpha with TypeScript example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page what
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <div>
+      <HeadingFluidImage
+        title="Học lập trình với trải nghiệm xuất sắc"
+        subtitle="Reprehenderit esse labore id veniam ut veniam non ex adipisicing amet ullamco dolor proident."
+        imageSrc={HOME_HEADER_IMG_URL}
+        actions={[
+          <Button variant="contained" color="primary" size="large">
+            Kiểm tra kỹ năng miễn phí
+          </Button>,
+          <Button variant="outlined" color="primary" size="large">
+            Đăng ký tư vấn
+          </Button>,
+        ]}
+      />
+    </div>
   )
 }
+
+export default Index

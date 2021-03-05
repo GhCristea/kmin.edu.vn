@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react'
+
 import { red } from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
 
@@ -7,6 +9,7 @@ import {
   BORDER_RADIUS,
   TEXT_FONT,
   HEADING_FONT,
+  ROUNDED_CORNER_RADIUS,
 } from './theme.constants'
 
 // Create a theme instance.
@@ -86,6 +89,14 @@ const theme = createMuiTheme({
     '0px 0px 40px rgba(16, 57, 85, 0.12)',
     '0px 0px 40px rgba(16, 57, 85, 0.12)',
   ],
+  mixins: {
+    roundedCorners: {
+      topLeft: { borderTopLeftRadius: ROUNDED_CORNER_RADIUS },
+      topRight: { borderTopRightRadius: ROUNDED_CORNER_RADIUS },
+      bottomLeft: { borderBottomLeftRadius: ROUNDED_CORNER_RADIUS },
+      bottomRight: { borderBottomRightRadius: ROUNDED_CORNER_RADIUS },
+    },
+  },
   components: {
     MuiButtonBase: {
       styleOverrides: {
@@ -108,5 +119,14 @@ const theme = createMuiTheme({
     },
   },
 })
+
+declare module '@material-ui/core/styles/createMixins' {
+  interface Mixins {
+    roundedCorners: Record<
+      'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight',
+      CSSProperties
+    >
+  }
+}
 
 export default theme

@@ -40,26 +40,26 @@ const theme = createMuiTheme({
     h1: {
       fontFamily: HEADING_FONT,
       fontWeight: 700,
-      fontSize: '53px',
-      lineHeight: '63.6px',
+      fontSize: '3.3125rem', // 53
+      lineHeight: 1.2,
     },
     h2: {
       fontFamily: HEADING_FONT,
       fontWeight: 700,
-      fontSize: '39px',
-      lineHeight: '46.8px',
+      fontSize: '2.4375rem', // 39
+      lineHeight: 1.2,
     },
     h3: {
       fontFamily: HEADING_FONT,
       fontWeight: 700,
-      fontSize: '31px',
-      lineHeight: '37.76px',
+      fontSize: '1.9375rem', // 31
+      lineHeight: 1.21,
     },
     h4: {
       fontFamily: HEADING_FONT,
       fontWeight: 700,
-      fontSize: '25px',
-      lineHeight: '30.45px',
+      fontSize: '1.5625rem', // 25
+      lineHeight: 1.218,
     },
   },
   shadows: [

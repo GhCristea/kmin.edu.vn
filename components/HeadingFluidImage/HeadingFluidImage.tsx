@@ -18,7 +18,7 @@ const HeadingFluidImage: FC<HeadingFluidImageProps> = (props) => {
 
   const content = useMemo(
     () => (
-      <Box>
+      <Box paddingTop={8}>
         <Typography variant="h1" color="primary" marginBottom={1}>
           {title}
         </Typography>

@@ -143,7 +143,7 @@ const Footer: FC<FooterProps> = (props) => {
           <Grid item xs>
             <Grid container spacing={COLUMN_SPACING}>
               {MENU.map((menu) => (
-                <Grid item key={menu.title} xs={12} sm={6} md={3}>
+                <Grid item key={menu.title} xs={6} sm={6} md={3}>
                   <Grid
                     container
                     spacing={MENU_SPACING}

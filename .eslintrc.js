@@ -64,7 +64,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '{pages,src,libs,components,common}{/**,}',
+            pattern: '{pages,src,libs,components,common,blocks}{/**,}',
             group: 'internal',
           },
         ],

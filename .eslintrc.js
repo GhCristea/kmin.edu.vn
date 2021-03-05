@@ -79,11 +79,11 @@ module.exports = {
             name: 'yup',
             message: 'Please use common/yup instead.',
           },
-          // {
-          //   name: '@material-ui/core',
-          //   importNames: ['Button'],
-          //   message: 'Please use customized components instead.',
-          // },
+          {
+            name: '@material-ui/core',
+            importNames: ['Button'],
+            message: 'Please use customized components instead.',
+          },
         ],
       },
     ],

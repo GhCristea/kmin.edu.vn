@@ -101,6 +101,11 @@ const theme = createMuiTheme({
         },
       },
     },
+    MuiCircularProgress: {
+      defaultProps: {
+        disableShrink: false,
+      },
+    },
   },
 })
 

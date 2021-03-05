@@ -2,7 +2,6 @@ import { FC } from 'react'
 
 import {
   AppBar,
-  Button,
   Container,
   Grid,
   makeStyles,
@@ -13,6 +12,7 @@ import Image from 'next/image'
 
 import { ABOUT_US, ARTICLES, COURSES, HOME_PAGE, SHOWROOM } from 'common/paths'
 import { LOGO_LIGHT_URL } from 'common/theme'
+import Button from 'components/Button'
 
 import Link from '../Link'
 

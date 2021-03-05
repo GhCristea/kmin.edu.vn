@@ -83,7 +83,7 @@ const UpcomingCourses: FC<UpcomingCoursesProps> = (props) => {
 const useStyles = makeStyles(({ spacing }) => ({
   root: {
     paddingTop: spacing(12),
-    paddingBottom: spacing(28),
+    paddingBottom: spacing(12),
   },
   container: {
     display: 'flex',

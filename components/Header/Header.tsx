@@ -16,7 +16,7 @@ import { LOGO_LIGHT_URL } from 'common/theme'
 
 import Link from '../Link'
 
-const APP_BAR_HEIGHT = 92
+export const APP_BAR_HEIGHT = 92
 const APP_BAR_LOGO_URL = LOGO_LIGHT_URL
 const APP_BAR_LOGO_HEIGHT = 48
 const APP_BAR_LOGO_WIDTH = 118

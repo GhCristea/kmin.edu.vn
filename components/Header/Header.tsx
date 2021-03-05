@@ -4,8 +4,8 @@ import {
   AppBar,
   Container,
   Grid,
+  Hidden,
   makeStyles,
-  Toolbar,
   Typography,
 } from '@material-ui/core'
 import Image from 'next/image'
@@ -47,20 +47,20 @@ const Header: FC<HeaderProps> = (props) => {
 
   return (
     <AppBar position="sticky" color="primary" className={classes.root}>
-      <Toolbar className={classes.toolbar}>
-        <Container className={classes.container}>
-          <Grid container spacing={3} alignItems="center">
-            <Link gridItem href={HOME_PAGE}>
-              <Image
-                alt="Kmin Education"
-                src={APP_BAR_LOGO_URL}
-                height={APP_BAR_LOGO_HEIGHT}
-                width={APP_BAR_LOGO_WIDTH}
-              />
-            </Link>
+      <Container className={classes.container}>
+        <Grid container spacing={3} alignItems="center">
+          <Link gridItem href={HOME_PAGE}>
+            <Image
+              alt="Kmin Education"
+              src={APP_BAR_LOGO_URL}
+              height={APP_BAR_LOGO_HEIGHT}
+              width={APP_BAR_LOGO_WIDTH}
+            />
+          </Link>
 
-            <Grid item xs />
+          <Grid item xs />
 
+          <Hidden smDown>
             {MENU_ITEMS.map((menuItem) => (
               <Link
                 gridItem
@@ -72,25 +72,25 @@ const Header: FC<HeaderProps> = (props) => {
               </Link>
             ))}
 
-            <Grid item>
+            <Hidden mdDown>
               <Button
+                gridItem
                 variant="contained"
                 size="large"
                 className={classes.skillTestButton}
               >
                 Kiểm tra kỹ năng
               </Button>
-            </Grid>
-          </Grid>
-        </Container>
-      </Toolbar>
+            </Hidden>
+          </Hidden>
+        </Grid>
+      </Container>
     </AppBar>
   )
 }
 
 const useStyles = makeStyles(({ palette, transitions }) => ({
-  root: { height: APP_BAR_HEIGHT },
-  toolbar: { minHeight: APP_BAR_HEIGHT },
+  root: { height: APP_BAR_HEIGHT, display: 'flex', justifyContent: 'center' },
   container: {},
   menuItem: {
     color: palette.primary.contrastText,

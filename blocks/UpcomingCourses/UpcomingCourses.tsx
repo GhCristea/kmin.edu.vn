@@ -45,7 +45,12 @@ const UpcomingCourses: FC<UpcomingCoursesProps> = (props) => {
   return (
     <Box className={classes.root}>
       <Container className={classes.container}>
-        <Typography variant="h1" color="primary" marginBottom={2}>
+        <Typography
+          variant="h1"
+          color="primary"
+          marginBottom={2}
+          textAlign="center"
+        >
           Các lớp học sắp khai giảng tháng 3
         </Typography>
 
@@ -62,8 +67,9 @@ const UpcomingCourses: FC<UpcomingCoursesProps> = (props) => {
                 key={course.id}
                 course={course}
                 gridItem={{
-                  xs: 6,
-                  sm: 3,
+                  xs: 12,
+                  sm: 6,
+                  md: 3,
                 }}
               />
             ))}

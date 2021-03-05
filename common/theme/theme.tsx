@@ -30,7 +30,7 @@ const theme = createMuiTheme({
   },
   typography: {
     fontSize: 16,
-    htmlFontSize: 18,
+    // htmlFontSize: 18,
     allVariants: {
       fontFamily: TEXT_FONT,
     },
@@ -59,6 +59,33 @@ const theme = createMuiTheme({
       lineHeight: '30.45px',
     },
   },
+  shadows: [
+    'none',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgb(57 40 166 / 15%)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+    '0px 0px 40px rgba(16, 57, 85, 0.12)',
+  ],
   components: {
     MuiButtonBase: {
       styleOverrides: {

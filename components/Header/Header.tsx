@@ -12,14 +12,14 @@ import {
 import Image from 'next/image'
 
 import { ABOUT_US, ARTICLES, COURSES, HOME_PAGE, SHOWROOM } from 'common/paths'
-import {
-  APP_BAR_HEIGHT,
-  APP_BAR_LOGO_HEIGHT,
-  APP_BAR_LOGO_URL,
-  APP_BAR_LOGO_WIDTH,
-} from 'common/theme'
+import { LOGO_LIGHT_URL } from 'common/theme'
 
-import Link from './Link'
+import Link from '../Link'
+
+const APP_BAR_HEIGHT = 92
+const APP_BAR_LOGO_URL = LOGO_LIGHT_URL
+const APP_BAR_LOGO_HEIGHT = 48
+const APP_BAR_LOGO_WIDTH = 118
 
 const MENU_ITEMS = [
   {
@@ -68,12 +68,16 @@ const Header: FC<HeaderProps> = (props) => {
                 href={menuItem.path}
                 className={classes.menuItem}
               >
-                <Typography variant="body1">{menuItem.label}</Typography>
+                <Typography variant="body2">{menuItem.label}</Typography>
               </Link>
             ))}
 
             <Grid item>
-              <Button variant="contained" className={classes.skillTestButton}>
+              <Button
+                variant="contained"
+                size="large"
+                className={classes.skillTestButton}
+              >
                 Kiểm tra kỹ năng
               </Button>
             </Grid>
@@ -105,8 +109,7 @@ const useStyles = makeStyles(({ palette, transitions }) => ({
   skillTestButton: {
     backgroundColor: palette.background.paper,
     color: palette.primary.main,
-    height: 44,
-    fontSize: '18px',
+    // height: 44,
     '&:hover': {
       backgroundColor: palette.background.paper,
     },
